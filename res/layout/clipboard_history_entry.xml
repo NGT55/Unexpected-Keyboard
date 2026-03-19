@@ -5,16 +5,28 @@
     android:layout_width="match_parent" 
     android:layout_height="wrap_content"
     android:clickable="true"
-    android:focusable="true">
+    android:focusable="true"
+    android:background="?android:attr/selectableItemBackground">
 
-    <!-- हमने width को match_parent कर दिया है ताकि क्लिक/स्वाइप पूरे एरिया पर काम करे -->
     <TextView 
         android:id="@+id/clipboard_entry_text" 
-        style="@style/clipboardEntry" 
         android:layout_width="match_parent" 
         android:layout_height="wrap_content"
-        android:padding="10dp"/>
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:textColor="#FFFFFF" />
 
-    <!-- पुराने Buttons वाला LinearLayout यहाँ से हटा दिया गया है -->
+    <!-- Inhe mat hatana, ye Java code ke errors ko fix karne ke liye hain -->
+    <View 
+        android:id="@+id/clipboard_entry_addpin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <View 
+        android:id="@+id/clipboard_entry_paste"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
 
 </LinearLayout>
