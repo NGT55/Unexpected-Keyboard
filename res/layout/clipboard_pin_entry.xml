@@ -1,21 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout 
-    xmlns:android="http://schemas.android.com/apk/res/android" 
+    xmlns:android="http://schemas.android.com" 
     android:orientation="horizontal" 
     android:layout_width="match_parent" 
     android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true">
 
-    <!-- हमने width को match_parent कर दिया ताकि क्लिक पूरे बार पर काम करे -->
     <TextView 
         android:id="@+id/clipboard_pin_text" 
-        style="@style/clipboardEntry" 
-        android:layout_width="match_parent" 
+        android:layout_width="0dp" 
         android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:maxLines="3"
-        android:padding="10dp"/>
+        android:padding="10dp"
+        android:textSize="16sp" />
 
-    <!-- Buttons वाला LinearLayout यहाँ से हटा दिया गया है क्योंकि अब हम Swipe और Direct Click इस्तेमाल करेंगे -->
+    <!-- Inhe rehne dein taaki Java code crash na ho -->
+    <View 
+        android:id="@+id/clipboard_entry_addpin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
+
+    <View 
+        android:id="@+id/clipboard_entry_paste"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="gone" />
 
 </LinearLayout>
